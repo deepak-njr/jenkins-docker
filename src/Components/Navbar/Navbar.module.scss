@@ -1,0 +1,110 @@
+@import "@styles/variables.module.scss";
+
+%selected {
+    background-color: transparent !important;
+    background-image: linear-gradient(89.85deg,
+            rgba($primary, 0.9) 0.13%,
+            rgba($secondary, 0.9) 53.1%,
+            rgba($strawberry, 0.9) 99.84%);
+}
+
+.navBar {
+    border-right: none !important;
+
+    [class~=ant-menu-submenu-arrow] {
+        color: $white !important;
+    }
+
+    [class~=ant-menu-title-content] {
+        span {
+            width: 100%;
+            display: flex;
+        }
+    }
+
+    [class~=ant-menu-item],
+    [class~=ant-menu-submenu] {
+        color: $white !important;
+        width: 100% !important;
+
+        &:active {
+            background: transparent;
+        }
+
+        [class~=ant-menu-submenu-title] {
+            &:hover {
+                color: $white !important;
+            }
+
+        }
+
+        [class~=ant-menu-sub] {
+            background-color: transparent !important;
+        }
+
+
+        &::after {
+            content: none !important;
+        }
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+    }
+
+    [class~=ant-menu-item-icon] {
+        fill: $white
+    }
+
+    [class~=ant-menu-item-selected] {
+        @extend %selected
+    }
+
+       [class~=ant-menu-item] {
+        color: $white !important;
+    }
+
+}
+
+.divider {
+    width: 75%;
+    display: flex;
+    margin-inline: auto;
+
+    [class~="ant-divider"] {
+        border-color: rgba($white, 0.4);
+    }
+}
+
+.footerStyle {
+    width: 100%;
+    padding: $whitespace-2 $whitespace-3 !important;
+    background: transparent !important;
+    bottom: 5px;
+}
+
+.PopoverMenu {
+    cursor: pointer;
+}
+
+[class~=ant-menu-submenu],
+[class~=ant-menu-submenu-popup] {
+
+    [class~=ant-menu] {
+        background: $primary !important;
+        color: $white !important;
+
+
+        [class~=ant-menu-item-selected] {
+            @extend %selected;
+            color: $white;
+        }
+
+    }
+
+    background: $primary !important;
+}

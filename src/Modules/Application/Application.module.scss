@@ -1,0 +1,16 @@
+@import "@styles/variables.module.scss";
+
+.logo {
+  height: 30px;
+  width: 50px;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  display: inline-flex !important;
+}
+
+.confirmModal {
+  [class~="ant-modal-confirm-btns"] {
+    text-align: center !important;
+  }
+}

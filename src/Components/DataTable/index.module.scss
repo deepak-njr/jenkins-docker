@@ -1,0 +1,12 @@
+.ActionWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    >button {
+        margin-left: 16px;
+    }
+}
+.lastRow td {
+    border-bottom: none !important;
+  }

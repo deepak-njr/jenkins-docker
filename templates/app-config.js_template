@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+read -r -d '' PROPERTIES_BODY <<-EOM
+const appConfig={
+    "imageKey": "%IMAGE_KEY%",
+    "apiURL": "%API_URL%",
+    "apiBase": "%API_BASE%",
+    "stripeDomain": "%STRIPE_DOMAIN%",
+    "stripeKey": "%STRIPE_KEY%",
+    "stripeEnabled": "%STRIPE_ENABLED%",
+    "inactivityTimeout": "%INACTIVITY_TIMEOUT%",
+    "logoutTimeout": "%LOGOUT_TIMEOUT%",
+    "refreshTime": "%REFRESH_TIME%",
+    "currencyCode": "%CURRENCY_CODE%",
+    "currencyCodeMultiCloud": "%CURRENCY_CODE_MULTICLOUD%",
+    "saltKey": "%SALT%",
+    "multicloudAWSMock": "%MULTICLOUD_AWS_MOCK%",
+    "multicloudAzureMock": "%MULTICLOUD_AZURE_MOCK%",
+    "multicloudDOMock": "%MULTICLOUD_DIGITAL_OCEAN_MOCK%",
+    "multicloudGCPMock": "%MULTICLOUD_GCP_MOCK%",
+    "multicloudOraclePMock": "%MULTICLOUD_ORACLE_CLOD_MOCK%",
+    "menusEnabled": "%ENABLED_MENU%",
+    "defaultRedirect": "%DEFAULT_REDIRECT%",
+    "azureADTenantID": "%TENANTID%",
+    "azureADClientID": "%CLIENTID%",
+    "supportEmail": "%SUPPORTEMAIL%",
+    "mediaHost":"%MEDIAHOST%",
+    "orgName":"%ORGNAME%"
+}
+window.appConfig = appConfig;
+
+EOM

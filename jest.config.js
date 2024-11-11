@@ -1,0 +1,47 @@
+module.exports = {
+  moduleDirectories: ["node_modules"],
+  collectCoverageFrom: ["src/**/*.{js,jsx}", "src/**/*.{ts,tsx}"],
+  coverageDirectory: "coverage",
+  testEnvironment: "jsdom",
+  moduleFileExtensions: ["ts", "js", "tsx", "jsx", "json", "node"],
+  testMatch: [
+    "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+    "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}",
+  ],
+  setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
+  globals: {
+    "ts-jest": {
+      tsConfig: "<rootDir>/tsconfig.json",
+    },
+  },
+  transform: {
+    "^.+\\.tsx?$": "ts-jest",
+    ".+\\.(png|jpg|gif|ttf|woff|woff2clear)$": "jest-transform-stub",
+    ".+\\.(css|scss|sass|less)$": "jest-transform-stub",
+    "\\.svg$": "jest-transform-stub",
+  },
+  moduleNameMapper: {
+    "^react-native$": "react-native-web",
+    "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
+    "^src/(?!@)(.*)": "<rootDir>/src/$1",
+    "^~(.*)$": "<rootDir>/src/$1",
+    "^@assets(.*)$": "<rootDir>/src/Assets/$1",
+    "^@components(.*)$": "<rootDir>/src/Components/$1",
+    "^@context(.*)$": "<rootDir>/src/Context/$1",
+    "^@hooks(.*)$": "<rootDir>/src/Hooks/$1",
+    "^@modules(.*)$": "<rootDir>/src/Modules/$1",
+    "^@routes(.*)$": "<rootDir>/src/Routes/$1",
+    "^@services(.*)$": "<rootDir>/src/Services/$1",
+    "^@store(.*)$": "<rootDir>/src/Store/$1",
+    "^@utils(.*)$": "<rootDir>/src/Utils/$1",
+    "^@styles(.*)$": "<rootDir>/src/Styles/$1",
+    "^@typedef(.*)$": "<rootDir>/src/Types/$1",
+    "react-pdf/dist/esm/entry.webpack5": "react-pdf",
+  },
+  transformIgnorePatterns: [
+    "/node_modules/(?!antd|@ant-design|rc-.+?|@babel/runtime|color-alpha|@antv).+(js|jsx|ts|tsx)$",
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
+    "^.+\\.module\\.(css|sass|scss)$",
+    "<rootDir>/node_modules/$i",
+  ],
+};

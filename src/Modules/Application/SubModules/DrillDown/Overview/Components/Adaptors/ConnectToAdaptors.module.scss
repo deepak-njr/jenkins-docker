@@ -1,0 +1,39 @@
+.ModalForm{
+  z-index: 1 !important;
+  .Title{
+    display: flex !important;
+    gap: 5px !important;
+    .ImageStyle{
+      height: 20px !important;
+    }
+  }
+}
+
+.ModalConfirmation{
+  z-index: 2 !important;
+}
+.ModalTitle{
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: 10px !important;
+}
+
+.InputStyle{
+  width: 100% !important;
+}
+
+.ModalContent{
+  display: inline !important;
+  margin-left: 5px !important;
+}
+
+.ButtonImage{
+  height: 20px !important;
+  margin-left: 4px !important;
+}
+
+.ButtonSuccess{
+  margin-left: 4px !important;
+  display: flex !important;
+  align-items: center !important;
+}

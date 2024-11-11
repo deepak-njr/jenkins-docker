@@ -1,0 +1,42 @@
+@import "@styles/variables.module.scss";
+
+.loginFormForgot {
+  color: $strawberry;
+}
+
+.inputErrorFiled {
+  border: 1px solid $strawberry !important;
+}
+
+.loginWithEmailText {
+  opacity: 0.6;
+}
+.tooltipLine > li {
+  color: $gray;
+  font-size: 12px;
+}
+.listEx {
+  color: $primary;
+}
+
+.displayFlexCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.loginButton:hover {
+  background-color: $primary !important;
+
+  .ant-btn-primary:hover,
+  .ant-btn-primary:focus {
+    background-color: $primary !important;
+  }
+}
+
+.resendButton{
+  margin-top: 15px;
+}

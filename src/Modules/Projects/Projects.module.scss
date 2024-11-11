@@ -1,0 +1,103 @@
+@import "@styles/variables.module.scss";
+
+.logo {
+    height: 30px;
+    width: 50px;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    display: inline-flex !important;
+}
+
+.confirmModal {
+    [class~="ant-modal-confirm-btns"] {
+        text-align: center !important;
+    }
+}
+
+.userUploadModal {
+    [class~=ant-modal-header] {
+        border-bottom: 0
+    }
+}
+
+.ContentWrapper {
+    height: calc(70vh - 110px);
+    width: 100%;
+    border-radius: 20px !important;
+    color: $white;
+  
+    [class~=ant-card-head] {
+      border-bottom: 0px;
+    }
+  }
+
+.applictions {
+    &[class~="ant-avatar"] {
+        height: 40px;
+        width: 40px;
+        aspect-ratio: 1;
+        background-color: $white;
+        border-radius: $whitespace-1;
+        padding: 2px;
+        box-shadow: 0px -4px 8px rgba($black, 0.07), 0px 4px 8px rgba($black, 0.07);
+        margin-left: -10px;
+        transition: all 300ms ease;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:hover {
+            margin-right: 10px;
+        }
+    }
+}
+
+.LicenseFormItem {
+    label {
+        width: 100%;
+    }
+}
+
+.LicensesInfo {
+    position: absolute;
+    right: 20px;
+    top: 4;
+    cursor: pointer;
+    color: gray;
+}
+.modalList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .modalList li:before {
+    content: "•";
+    font-weight: bold;
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+    vertical-align: middle;
+  }
+  
+  .modalList li {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+
+
+  .cardStyle {
+    border-radius: 1.25rem !important;
+    overflow: hidden;
+   
+    [class~=ant-card-head] {
+      box-shadow: 0px 12px 23px rgba($primary, 0.04);
+      height: 85px;
+  
+      [class~=ant-card-head-wrapper] {
+        height: 100%;
+      }
+    }
+  }

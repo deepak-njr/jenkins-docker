@@ -1,0 +1,45 @@
+@import "@styles/variables.module.scss";
+
+.container {
+  background: $white !important;
+  border-radius: 20px !important;
+  display: flex;
+  align-items: center;
+}
+
+.containerLeft {
+  max-width: 4rem;
+  max-height: 4rem;
+  aspect-ratio: 1;
+  background: $smokewhite;
+  border-radius: 1rem;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.containerCenter {
+  position: relative;
+
+}
+
+.containerText {
+  color: $primary;
+  word-break: normal;
+  white-space: normal;
+}
+
+.containerNumber {
+  font-weight: 500 !important;
+  color: $primary !important;
+  margin: 0 !important;
+  font-size: 26px !important;
+}
+
+.containerRightText {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: 8px;
+}

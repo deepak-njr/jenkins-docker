@@ -1,0 +1,69 @@
+@import "@styles/variables.module.scss";
+
+.header {
+  align-items: center;
+  background-color: $white !important;
+  min-height: 90px;
+
+  &.SmallHeader {
+    padding: 0px 16px !important;
+  }
+}
+
+.logoStyle {
+  img {
+    max-height: 2rem;
+  }
+}
+
+.bellIcon {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.userName {
+  font-size: 16px;
+  color: $primary;
+}
+
+.userType {
+  font-size: 12px;
+}
+
+.searchBox {
+  height: $whitespace-6;
+  border: 1px solid $smokewhite !important;
+  background: $smokewhite !important;
+  transition: all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+
+  &.SearchNarrow {
+    width: 48px;
+
+    &[class~="ant-input-affix-wrapper-focused"] {
+      width: 90%;
+    }
+  }
+}
+
+.NavExtras {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+
+  &.hidden {
+    flex: 0;
+    overflow: hidden;
+
+    width: 0;
+  }
+}
+
+.searchBox input {
+  color: $gray !important;
+  background: $smokewhite !important;
+}

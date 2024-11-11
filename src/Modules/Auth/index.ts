@@ -1,0 +1,13 @@
+export { UserConsentSuccess } from "./Login/userConsentSuccess";
+export { VerifyOtp } from "./VerifyOtp/VerifyOtp";
+export { Login } from "./Login/Login";
+export { SignUp } from "./SignUp/SignUp";
+export { ThanksCard } from "./ThanksCard/ThanksCard";
+export { VerifyCard } from "./VerifyCard/VerifyCard";
+export { CreatePasswordCard } from "./CreatePassword/CreatePassword";
+export { SuccessCard } from "./SuccessCard/SuccessCard";
+export { EmailCheck } from "./ResetPassword/EmailCheck";
+export { ResetPassword } from "./ResetPassword/ResetPassword";
+export { PasswordUpdatedMessage } from "./ResetPassword/ResetPasswordUpdated";
+export { ChangePassword } from "./ChangePassword/ChangePassword";
+export { EmailSent } from "./ResetPassword/EmailSent";

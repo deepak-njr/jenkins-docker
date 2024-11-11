@@ -1,0 +1,30 @@
+@import '@styles/variables.module.scss';
+
+.TooltipWrapper {
+    background-color: $white !important;
+    border-radius: 12px !important;
+    min-width: 150px;
+    box-shadow: 0px 0px 8px rgba($black, 0.2);
+
+}
+
+.Header {
+    height: 40px;
+    padding: 8px 20px;
+    background-color: rgba($primary, 0.05);
+
+}
+
+.Body {
+    padding: 8px 20px;
+    background-color: $white;
+    border-radius: 12px !important;
+}
+
+.Dot {
+    [class~=ant-badge-status-dot] {
+        height: 8px !important;
+        width: 8px !important;
+    }
+
+}

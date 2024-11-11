@@ -1,0 +1,78 @@
+@import "@styles/variables.module.scss";
+
+.expenseTable {
+  [class~="ant-table"] {
+    thead {
+      tr {
+        th {
+          background: transparent !important;
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  height: 30px;
+  width: 50px;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  display: inline-flex !important;
+}
+
+.MorePopOver {
+  [class~="ant-popover-arrow"] {
+    display: none;
+  }
+
+  [class~="ant-popover-inner"] {
+    border-radius: 10px;
+  }
+
+  [class~="ant-popover-title"] {
+    height: 40px;
+    padding: 8px 20px;
+    background-color: rgba($primary, 0.05);
+  }
+}
+
+.CarouselPagination {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  justify-content: flex-end;
+
+  li {
+    margin: 0 8px;
+    line-height: 1;
+    height: 20px;
+    width: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+.Pagination {
+  &.Active {
+    border-radius: 100%;
+    background-color: $primary;
+    color: $white;
+  }
+}
+
+.RightArrow,
+.LeftArrow {
+  border-radius: 100%;
+  border: 1px solid $strawberry;
+  color: $strawberry;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}

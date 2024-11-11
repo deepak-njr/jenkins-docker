@@ -1,0 +1,89 @@
+@import "@styles/variables.module.scss";
+
+.ContentWrapper {
+  height: 100% !important ;
+  width: 100%;
+  border-radius: 20px !important;
+  margin-right: 2px !important;
+  color: $white;
+  [class~="ant-card-body"] {
+    padding: 0px 7px !important;
+    border-radius: 0px 20px !important;
+    height: 100% !important;
+
+    [class~="ant-row"] {
+      height: 100% !important;
+    }
+  }
+}
+
+.conversationList {
+  width: 100%;
+  height: 100% !important;
+  background: linear-gradient(
+    136.62deg,
+    rgba(41, 37, 110, 0.05) 0%,
+    rgba(19, 99, 223, 0.05) 31.63%,
+    rgba(152, 37, 141, 0.05) 69.48%,
+    rgba(239, 64, 106, 0.05) 99.55%
+  );
+
+  border-radius: 0px 20px 20px 0px;
+  overflow: hidden;
+}
+.conversationListView {
+  padding-right: 0px;
+  overflow-y: auto;
+  height: 85%;
+}
+
+.listItem {
+  display: flex;
+  padding: 10px;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid #d7d5f1 !important;
+  margin-bottom: 10px;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid #d7d5f1 !important;
+  }
+}
+
+.iconDelete {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+
+.btnDelete {
+  background: transparent !important;
+  border-radius: 50% !important;
+  border: 1px solid transparent !important;
+}
+
+.contentCard {
+  background: transparent !important;
+  [class~="ant-card-body"] {
+    [class~="ant-card-meta-title"] {
+      margin: 0;
+    }
+    display: flex !important;
+    margin-bottom: 0px;
+    border: 1px solid #d7d5f1 !important;
+    /*box-shadow: 0 2px 4px rgba(0,0,0,.1);*/
+    border-radius: 10px !important;
+    align-items: center !important;
+    padding: 8px !important;
+    width: 100% !important;
+    height: 70px !important;
+  }
+}
+.ant-modal-title {
+  text-align: left;
+}
+
+.fontColor{
+  color:#29256e;
+  white-space: pre-line;
+}

@@ -1,0 +1,61 @@
+// color
+$black: #000;
+$white: #fff;
+$smokewhite: #f1f1f1;
+$primary: #29256e;
+$secondary: #98258d;
+$gray: #7b7a8c;
+$headingGray: #51505d;
+$paraGray:#51505D;
+$oceanGreen: #79dae8;
+$strawberry: #ef406a;
+$secondaryGreen: #1cd1a1;
+$secodnaryRed: #d11c1c;
+$graphRed: #e80038;
+$graphYellow: #fe8e0e;
+$graphBlue: #1363df;
+$grey: #f1f1f1;
+$byzantine: #c12fb3;
+$neon: #fb2b76;
+
+
+:root {
+  --primary: $primary;
+  --primaryLight: rgba($primary, 0.1);
+  --secondary: $secondary;
+  --primaryLight: rgba($secondary, 0.1);
+  --strawberry: $strawberry;
+  --oceanGreen: $oceanGreen;
+  --ringTotal: $primary;
+  --ringTotalLight: rgba($primary, 0.1);
+  --ringPaid: $oceanGreen;
+  --ringPaidLight: rgba($oceanGreen, 0.1);
+  --ringPending: $strawberry;
+  --ringPendingLight: rgba($strawberry, 0.1);
+  --gray: $gray;
+  --headingGray: $headingGray;
+  --paraGray: $paraGray;
+  --secondaryGreen: $secondaryGreen;
+  --secondaryRed: $secodnaryRed;
+  --white: $white;
+  --smokewhite: $smokewhite;
+  --graphBlue: $graphBlue;
+  --black: $black;
+  --grey: $grey;
+  --byzantine: $byzantine;
+  --neon: $neon;
+}
+
+$baseWhitespace: 8px;
+$whitespace-1: $baseWhitespace;
+$whitespace-2: $baseWhitespace * 2;
+$whitespace-3: $baseWhitespace * 3;
+$whitespace-4: $baseWhitespace * 4;
+$whitespace-5: $baseWhitespace * 5;
+$whitespace-6: $baseWhitespace * 6;
+$whitespace-7: $baseWhitespace * 7;
+$whitespace-auto: auto;
+
+//font-weight
+$fontWeight: 100;
+$fontWeight-5 : $fontWeight * 5

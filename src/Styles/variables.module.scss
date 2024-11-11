@@ -1,0 +1,64 @@
+@import "./variables.scss";
+
+:export {
+    primary: $primary;
+    primaryLight: rgba($primary, 0.1);
+    secondary: $secondary;
+    primaryLight: rgba($secondary, 0.1);
+    strawberry: $strawberry;
+    oceanGreen: $oceanGreen;
+    ringTotal: $primary;
+    ringTotalLight: rgba($primary, 0.1);
+    ringPaid: $oceanGreen;
+    ringPaidLight: rgba($oceanGreen, 0.1);
+    ringPending: $strawberry;
+    ringPendingLight: rgba($strawberry, 0.1);
+    gray: $gray;
+    headingGray:$headingGray;
+    paraGray:$paraGray;
+    gray30: rgba($gray, 0.3);
+    secondaryGreen: $secondaryGreen;
+    secondaryRed: $secodnaryRed;
+    white: $white;
+    smokewhite: $smokewhite;
+    graphBlue: $graphBlue;
+    black: $black;
+    grey: $grey;
+    byzantine: $byzantine;
+    neon: $neon;
+}
+
+
+:export {
+    whitespaceAuto: $whitespace-auto;
+    whitespace1: $whitespace-1;
+    whitespace2: $whitespace-2;
+    whitespace3: $whitespace-3;
+    whitespace4: $whitespace-4;
+    whitespace5: $whitespace-5;
+    whitespace6: $whitespace-6;
+    whitespace7: $whitespace-7;
+}
+
+// font-weight
+
+:export {
+    fontWeight5: $fontWeight-5
+}
+
+
+// chart colors 
+
+:export {
+    chartColor1: hsla(243, 50%, 49%, 1);
+    chartColor2: hsla(306, 61%, 47%, 1);
+    chartColor3: hsla(188, 71%, 72%, 1);
+    chartColor4: hsla(216, 100%, 65%, 1);
+    chartColor5: hsla(346, 85%, 67%, 1);
+    chartColor6: hsla(216, 100%, 61%, 1);
+    chartColor7: hsla(346, 86%, 64%, 1);
+    chartColor8: hsla(306, 61%, 37%, 1);
+    chartColor9: hsla(188, 71%, 69%, 1);
+    chartColor10: hsla(243, 50%, 29%, 1);
+    chartColor11: hsla(346, 85%, 59%, 1)
+}

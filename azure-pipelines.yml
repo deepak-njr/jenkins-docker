@@ -1,0 +1,69 @@
+trigger:
+  - develop
+
+pr: none
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+    major-minor: "develop.1.0"
+    env: "dev"
+    revision: $[ counter(variables['major-minor'],0) ]
+
+stages:
+  - stage: Analyse
+    jobs:
+      - job: SonarQube
+        steps:
+          - task: SonarQubePrepare@5
+            inputs:
+              SonarQube: 'sonarqube-saaspe-app'
+              scannerMode: 'CLI'
+              configMode: 'manual'
+              cliProjectKey: 'SaasPe_saaspe-app_cfb39372-750e-4284-8d71-0279f9532509'
+              cliProjectName: 'saaspe-app'
+              cliSources: '.'
+          - task: SonarQubeAnalyze@5
+            inputs:
+              jdkversion: 'JAVA_HOME_17_X64'
+        condition: eq(variables['env'], 'dev')
+  - stage: "Build"
+    jobs:
+      - job: build
+        steps:
+          - script: |
+              yarn --silent
+            displayName: "yarn install"
+          - script: |
+              yarn build
+            displayName: "Building"
+
+          - task: AzureCLI@2
+            inputs:
+              azureSubscription: 'saaspe-resource-connection'
+              scriptType: 'pscore'
+              scriptLocation: 'inlineScript'
+              inlineScript: |
+                az extension add --name azure-devops
+                az pipelines variable-group variable list --group-id 9 --org "https://dev.azure.com/mindgraph" --project "SaasPe"
+                az pipelines variable-group variable update --group-id 9 --name "dev" --value "$(major-minor).$(revision)" --org "https://dev.azure.com/mindgraph" --project "SaasPe"
+            env:
+              AZURE_DEVOPS_EXT_PAT: $(System.AccessToken)  
+          - task: Docker@2
+            displayName: "Build image and publish to acr"
+            inputs:
+              containerRegistry: "saaspe-public-hub"
+              repository: "saaspe-app"
+              command: "build"
+              Dockerfile: "**/Dockerfile"
+              tags: |
+                $(major-minor).$(revision)
+          - task: Docker@2
+            displayName: Push
+            inputs:
+              containerRegistry: "saaspe-public-hub"
+              repository: "saaspe-app"
+              command: "push"
+              tags: |
+                $(major-minor).$(revision)
+                

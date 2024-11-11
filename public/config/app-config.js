@@ -1,0 +1,28 @@
+const appConfig={
+    "imageKey": "?sv=2022-11-02&ss=bfqt&srt=sco&sp=rwdlacupiytfx&se=2033-12-31T17:33:24Z&st=2023-06-15T09:33:24Z&spr=https&sig=aBbw0Ic58peTtd%2B6rK8uB%2BbE%2FAj7BKtC4KqaVR2sKdo%3D",
+    "apiURL": "https://dev-api.saaspe.com",
+    "apiBase": "api",
+    "stripeDomain": "https://dev-stripe.saaspe.com",
+    "stripeKey": "pk_test_51KYLjJJ6PaybcjnGUTqqQRYLncHvjPHcqAd8fvzlcyT4rYP94kIOjmAVXBKRIUQS7Vgffb45AePErqAFGDwupwD900zFwLnXRT",
+    "stripeEnabled": "true",
+    "inactivityTimeout": "5",
+    "logoutTimeout": "30",
+    "refreshTime": "55",
+    "currencyCode": "USD",
+    "currencyCodeMultiCloud": "INR",
+    "saltKey": "dZ65x6d7uu",
+    "multicloudAWSMock": "true",
+    "multicloudAzureMock": "false",
+    "multicloudDOMock": "true",
+    "multicloudGCPMock": "true",
+    "multicloudOraclePMock": "true",
+    "menusEnabled": "DASHBOARD,APPLICATIONS,USERS,DEPARTMENTS,MULTICLOUD,PROJECTS,SUBSCRIPTIONS,CONTRACTS,CLM,RENEWALS,INVOICES,MARKETPLACE,ADMINISTRATION,INTEGRATIONS,ONBOARDINGMANAGEMENT,TRACKREQUESTS,WORKFLOWS,AUDITLOGS,HELPANDSUPPORT",
+    "defaultRedirect": "/dashboard",
+    "azureADTenantID": "b1997eae-0fbe-4c39-9837-392933467165",
+    "azureADClientID": "2affaa56-c56f-4bfa-98bf-2e81c8950977",
+    "supportEmail": "support@saaspe.com",
+    "mediaHost":"https://saaspemedia.blob.core.windows.net",
+    "orgName":"Saaspe",
+    "authflow": "BOTH"
+}
+window.appConfig = appConfig;

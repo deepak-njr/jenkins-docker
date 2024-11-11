@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: saaspeapp
+  namespace: {#namespace#}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: saaspeapp
+  template:
+    metadata:
+      labels:
+        app: saaspeapp
+    spec:
+      containers:
+        - name: saaspeapp
+          image: {#image#}
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "64Mi"
+            limits:
+              cpu: "200m"
+              memory: "128Mi"

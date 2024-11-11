@@ -1,0 +1,41 @@
+@import "@styles/variables.module.scss";
+
+.LegendItem {
+    cursor: pointer;
+    opacity: 1;
+
+    &Disabled {
+        opacity: 0.3;
+    }
+}
+
+.ListItem {
+    border-bottom: none !important;
+    text-align: left;
+    width: 100%;
+}
+
+[class~=g2-html-annotation] {
+    line-height: 1.5 !important;
+}
+.titleItem{
+    display: grid;
+}
+
+.canvas {
+    path {
+        stroke-width: 0 !important;
+    }
+}
+
+.Title {
+    margin-top: -20px
+}
+
+.Value {
+    font-weight: bold;
+}
+
+[class~=recharts-wrapper] {
+    margin: auto;
+}

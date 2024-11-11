@@ -1,0 +1,61 @@
+@import "@styles/variables.module.scss";
+
+.sider {
+  height: 100%;
+  border-radius: 0px 20px 20px 0px;
+  overflow: hidden;
+  min-width: 250px !important;
+  max-width: 250px !important;
+
+  &[class~=ant-layout-sider-collapsed] {
+    min-width: 0 !important;
+    max-width: auto !important;
+  }
+}
+
+.ContentWrapper {
+  height: calc(100vh - 110px);
+  width: 100%;
+  border-radius: 20px !important;
+  color: $white;
+
+  [class~=ant-card-head] {
+    border-bottom: 0px;
+  }
+}
+
+.rightSideSection {
+  background-image: url("../../Assets/SVG/rightImg.svg");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+.leftSideSection {
+  background-image: url("../../Assets/SVG/leftImg.svg");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+.cardStyle {
+  box-shadow: -4px 8px 24px rgba(44, 63, 88, 0.02) !important;
+  background: $white !important;
+  border-radius: 1.25rem !important;
+  align-items: center;
+  display: flex;
+  max-width: 500px;
+  margin: auto !important;
+  justify-content: center;
+}
+
+.onboardingContentWrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+}

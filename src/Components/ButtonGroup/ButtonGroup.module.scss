@@ -1,0 +1,23 @@
+@import "@styles/variables.module.scss";
+
+
+.buttonGroupSection {
+    border: 1px solid $smokewhite;
+    border-radius: 3rem;
+    padding: 0.3rem;
+    background-color: $smokewhite !important;
+}
+
+.button {
+    border: 0 !important;
+    color: $gray !important;
+
+    &:disabled {
+        opacity: 0.5;
+    }
+}
+
+.active {
+    background-color: $white !important;
+    color: $secondary !important;
+}
